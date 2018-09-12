@@ -9,6 +9,11 @@ gem 'facter', '>= 1.7.0'
 gem 'rspec-puppet'
 gem 'beaker'
 gem 'beaker-rspec'
+gem 'test-kitchen'
+gem 'kitchen-puppet', '>=1.4.0'
+gem 'kitchen-vagrant'
+gem 'librarian-puppet'
+gem 'kitchen-ec2'
 
 # rspec must be v2 for ruby 1.8.7
 if RUBY_VERSION >= '1.8.7' && RUBY_VERSION < '1.9'

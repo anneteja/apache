@@ -31,9 +31,16 @@ task :validate do
   end
 end
 
-desc 'Run metadata_lint, lint, validate, and spec tests.'
+desc 'Run lint, validate, and spec tests.'
 task :test do
-  [:metadata_lint, :lint, :validate, :spec].each do |test|
+  [:lint, :validate, :spec].each do |test|
     Rake::Task[test].invoke
   end
+end
+
+begin
+  require 'kitchen/rake_tasks'
+  Kitchen::RakeTasks.new
+rescue LoadError
+  puts '>>>>> Kitchen gem not loaded, omitting tasks' unless ENV['CI']
 end
