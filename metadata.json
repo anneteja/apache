@@ -1,0 +1,18 @@
+{
+  "name": "anneteja-apache",
+  "version": "0.1.0",
+  "author": "anneteja",
+  "summary": "An apache module"
+  "license": "Apache-2.0",
+  "source": "git@github.com:anneteja/apache.git",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
