@@ -8,11 +8,11 @@ class apache::config (
 		ensure => file,
 		path   => $configfile,
 		source => $configsource,
-        }
+           }
 
 	file { 'vhost-file':
 		ensure  => file,
 		path    => $vhostfile,
 		content => template($vhostsource),
-        }
+       }
 }
