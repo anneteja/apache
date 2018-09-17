@@ -18,8 +18,7 @@ node {
   stage 'lint testing'
   sh '''#!/bin/bash
   source /usr/local/rvm/scripts/rvm
-  bundle exec bundle exec puppet-lint --no-autoloader_layout-check manifests/*.pp
-  bundle exec bundle exec puppet-lint --no-hard_tabs-check manifests/config.pp
+  bundle exec puppet-lint --no-autoloader_layout-check manifests/*.pp
   '''
 
   stage 'rspec testing'
