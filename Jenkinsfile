@@ -19,6 +19,7 @@ node {
   sh '''#!/bin/bash
   source /usr/local/rvm/scripts/rvm
   bundle exec bundle exec puppet-lint --no-2sp_soft_tabs-check manifests/*.pp
+  bundle exec bundle exec puppet-lint --no-hard_tabs-check manifests/*.pp
   bundle exec bundle exec puppet-lint --no-autoloader_layout-check manifests/*.pp
   '''
 
