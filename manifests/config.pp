@@ -1,11 +1,16 @@
 # Install and configure an Apache server
 # You should feel free to expand on this and document any parameters etc
 class apache::config (
-	String $configsource => lookup({ 'name' => 'apache.configsource', 'default_value' => $::apache::parameters::configsource}),
-	String $configfile => lookup({ 'name' => 'apache.configfile', 'default_value' => $::apache::parameters::configfile}),
-	String $vhostsource => lookup({ 'name' => 'apache.vhostsource', 'default_value' => $::apache::parameters::vhostsource}),
-	String $vhostfile => lookup({ 'name' => 'apache.vhostfile', 'default_value' => $::apache::parameters::vhostfile})
-	) inherits ::apache::parameters {
+	String $configsource = lookup({ 'name' => 'apache.configsource', 
+                                        'default_value' => $::apache::parameters::configsource}),
+	String $configfile = lookup({ 'name' => 'apache.configfile', 
+                                      'default_value' => $::apache::parameters::configfile}),
+	String $vhostsource = lookup({ 'name' => 'apache.vhostsource',  
+                                       'default_value' => $::apache::parameters::vhostsource}),
+	String $vhostfile = lookup({ 'name' => 'apache.vhostfile', 
+                                     'default_value' => $::apache::parameters::vhostfile})
+	)
+  inherits ::apache::parameters {
 	file { 'config-file':
 		ensure => file,
 		path   => $configfile,
