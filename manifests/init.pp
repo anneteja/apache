@@ -5,5 +5,5 @@ class apache {
 	include apache::config
 	include apache::service
 
-	Class[ 'apache::package'] -> Class[ 'apache::config'] ~> Class[ 'apache::service']
+	Class['apache::package'] -> Class['apache::config'] ~> Class['apache::service']
       }

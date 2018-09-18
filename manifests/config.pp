@@ -6,7 +6,7 @@ class apache::config (
 	String $vhostsource = lookup({ 'name' => 'apache.vhostsource', 'default_value' => $::apache::parameters::vhostsource}),
 	String $vhostfile = lookup({ 'name' => 'apache.vhostfile', 'default_value' => $::apache::parameters::vhostfile})
       )
-         inherits::apache::parameters {
+         inherits ::apache::parameters {
 	  file { 'config-file':
            ensure => file,
            path => $configfile,
