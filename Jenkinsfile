@@ -18,7 +18,7 @@ node {
   stage 'lint testing'
   sh '''#!/bin/bash
   source /usr/local/rvm/scripts/rvm
-  bundle exec rake lint 
+  bundle exec puppet-lint manifests/
   '''
 
   stage 'rspec testing'
