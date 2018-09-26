@@ -18,4 +18,4 @@ class apache::config(
 		                                        path    => $vhostfile,
 		                                        content => template($vhostsource),
                                                     }
-                                             }
+                                              }
