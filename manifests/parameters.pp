@@ -8,13 +8,13 @@ class apache::parameters{
 		                                    $vhostsource  = 'apache/vhost.conf.erb'
   		                                    $servicename  = 'httpd'
                                                } 
-                                                  elsif $::osfamily == 'Debian' {
-		                                                                 $packagename  = 'apache2'
-    		                                                                 $configfile   = '/etc/apache2/apache2.conf'
-    		                                                                 $configsource = 'puppet:///modules/apache/apache2.conf'
-		                                                                 $vhostfile    = '/etc/apache2/sites-enabled/vhost.conf'
-		                                                                 $vhostsource  = 'apache/vhost.conf.erb'
-  		                                                                 $servicename  = 'apache2'
-  	                                                                     } else {
-	                                                                         } 
+                                                  elsif $::osfamily == 'Debian'{
+		                                                                $packagename  = 'apache2'
+    		                                                                $configfile   = '/etc/apache2/apache2.conf'
+    		                                                                $configsource = 'puppet:///modules/apache/apache2.conf'
+		                                                                $vhostfile    = '/etc/apache2/sites-enabled/vhost.conf'
+		                                                                $vhostsource  = 'apache/vhost.conf.erb'
+  		                                                                $servicename  = 'apache2'
+  	                                                                   } else {
+	                                                                       } 
               }
